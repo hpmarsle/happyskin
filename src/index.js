@@ -2,14 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
-import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
-import { thunk } from 'redux-thunk';
+
 import { Provider } from 'react-redux';
+import store from './store'
 
 ReactDOM.render(
   (<Router>
     <div>
-      <Route path="/" component={App}/> 
+      <Provider store={store}>
+        <Route path="/" component={App}/> 
+      </Provider>
     </div>
   </Router>),
 
