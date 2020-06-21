@@ -7,6 +7,12 @@ export default (state = { products:[], loading: false }, action) => {
                 loading: true 
 
             }
+        case 'DISPLAY_PRODUCTS':
+            return {
+                ...state,
+                products: action.products, 
+                loading: false
+            }
         default:
             return state
     }
