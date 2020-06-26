@@ -1,9 +1,15 @@
 import React from 'react'
+import styled from 'styled-components'
+
+const Paragraph = styled.p`
+    background: pink;
+    font-size: 2em;
+`
 
 const ProductCard = (props) => {
     return (
-        <div id={props.key}>  
-            <p>{props.name} </p>
+        <div id={props.key} >  
+            <Paragraph>{props.name} </Paragraph>
             <p>{props.brand} </p>
             <p>{props.image} </p>
             <p>{props.ingredients} </p>
