@@ -13,7 +13,8 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "redux": "^4.0.5",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "styled-components": "^5.1.1"
   },
   "scripts": {
     "start": "PORT=3001 react-scripts start",
@@ -37,6 +38,10 @@
     ]
   },
   "devDependencies": {
+    "babel-plugin-styled-components": "^1.10.7",
     "redux-devtools-extension": "^2.13.8"
+  },
+  "resolutions": {
+    "styled-components": "^5"
   }
 }
