@@ -1,12 +1,12 @@
 import React from 'react'
-import Product from './Product'
+import ProductCard from './ProductCard'
 
 export default function Products(props) {
 
     return (
         <div>
             Products here
-            <Product />
+            <ProductCard />
             {/*props.products.map(product => <li key={product.id}>{product.name}</li>)*/}
         </div>
     )
