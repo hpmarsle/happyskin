@@ -12,11 +12,7 @@ export default function Products(props) {
                 name={product.name} 
                 brand={product.brand} 
                 image={product.image} 
-                ingredients={product.ingredients} 
-                description={product.description}
-                size={product.size}
                 price={product.price}
-                qty={product.quantity}
                 reviews={product.reviews[0].star_rating}
                 /> 
             )}
