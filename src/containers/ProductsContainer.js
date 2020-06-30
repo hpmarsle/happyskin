@@ -14,7 +14,7 @@ class ProductsContainer extends Component {
         
         return (
             <div>
-                <h1>All of my products will display on the home page</h1>
+
                 <Route exact path='/products/:id' render={(routerProps) => <ProductPage {...routerProps} products={this.props.products} /> } />
                 <Route exact path='/' render={() => <Products products={this.props.products} /> } />
             </div>
