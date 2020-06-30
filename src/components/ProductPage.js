@@ -1,5 +1,4 @@
 import React from 'react'
-import ProductCard from './ProductCard'
 import ReviewsContainer from '../containers/ReviewsContainer'
 
 const ProductPage = (props) => {
