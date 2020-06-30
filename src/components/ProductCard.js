@@ -18,7 +18,7 @@ const Image = styled.img`
 const ProductCard = (props) => {
     return (
         <StyledDiv>
-            <div id={props.key} >  
+            <div id={props.id} >  
                 <Image src={props.image} alt="product pic"/>
                 <div> {props.name} </div>
                 <div>{props.brand} </div>
