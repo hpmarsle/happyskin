@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { fetchProducts } from '../actions/products'
 import { connect } from 'react-redux'
 import Products from '../components/Products'
+import ProductPage from '../components/ProductPage'
+import { Route } from 'react-router-dom'
 
 class ProductsContainer extends Component {
     componentDidMount() {
@@ -13,8 +15,8 @@ class ProductsContainer extends Component {
         return (
             <div>
                 <h1>All of my products will display on the home page</h1>
-                
-                <Products products={this.props.products} />
+                <Route exact path='/products/:id' render={(routerProps) => <ProductPage {...routerProps} products={this.props.products} /> } />
+                <Route exact path='/' render={() => <Products products={this.props.products} /> } />
             </div>
         )
     }
