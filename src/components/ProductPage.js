@@ -1,5 +1,6 @@
 import React from 'react'
 import ProductCard from './ProductCard'
+import ReviewsContainer from '../containers/ReviewsContainer'
 
 const ProductPage = (props) => {
 
@@ -15,7 +16,7 @@ const ProductPage = (props) => {
             <h3>{product ? product.reviews[0].star_rating : null}</h3>
             <p>{product ? product.ingredients : null}</p>
             {product ? <img src={product.image} alt="product"/> : null}
-   
+            <ReviewsContainer />
         </div>
     )
 }
