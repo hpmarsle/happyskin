@@ -5,7 +5,7 @@ const ProductPage = (props) => {
 
     console.log(props)
 
-    let product = props.products[props.match.params.id - 1]
+    let product = props.products.filter(product => product.id == props.match.params.id)[0]
     console.log(product)
     return (
         <div>
