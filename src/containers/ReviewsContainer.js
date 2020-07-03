@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import ReviewInput from '../components/ReviewInput'
 import Reviews from '../components/Reviews'
+import { connect } from 'react-redux'
 
-export default class ReviewsContainer extends Component {
+class ReviewsContainer extends Component {
 
     render() {
         return (
@@ -16,3 +17,9 @@ export default class ReviewsContainer extends Component {
 
 
 }
+
+const mapDispatchToProps = dispatch => {
+    addReview: (review) => dispatch({type: 'ADD_REVIEW', review})
+}
+
+export default connect(null, mapDispatchToProps)(ReviewsContainer)
