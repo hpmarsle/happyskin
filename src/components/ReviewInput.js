@@ -1,7 +1,8 @@
 import React from 'react'
+import { addReview } from '../actions/reviews'
+import { connect } from 'react-redux'
 
-
-export default class ReviewInput extends React.Component {
+class ReviewInput extends React.Component {
     state = {
         star_rating: '',
         comments: ''
@@ -27,3 +28,6 @@ export default class ReviewInput extends React.Component {
         )
     }
 }
+
+
+export default connect(null, {addReview})(ReviewInput)
