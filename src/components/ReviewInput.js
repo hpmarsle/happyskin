@@ -13,11 +13,20 @@ class ReviewInput extends React.Component {
             [event.target.name]: event.target.value
         })
     }
+
+    handleSubmit = (event) => {
+        event.preventDefault()
+        this.setState({
+            star_rating: '',
+            comments: ''
+        })
+
+    }
     
     render() {
         return (
             <div>
-                <form>
+                <form onSubmit={this.handleSubmit}>
                     <label>Rating</label>
                     <input type="text"name="star_rating" value={this.state.star_rating} onChange={this.handleChange}/>
                     <label>Comments:</label>
