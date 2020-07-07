@@ -7,12 +7,16 @@ export default (state = { products:[], loading: false }, action) => {
                 products: action.payload,
                 loading: true
             }
-        case 'DISPLAY_PRODUCTS':
-            return {
-                ...state,
-                products: action.products, 
-                loading: false
-            }
+        case 'ADD_REVIEW':
+        
+            let products = state.products.map(product => {
+                if (product.id == action.payload.id) {
+                    return action.payload
+                } else {
+                    return product 
+                }
+            })
+            return {...state, products: products}
         default:
             return state
     }
