@@ -9,9 +9,9 @@ export const addReview = (review, productId) => {
             body: JSON.stringify(review)
         })
         .then(response => response.json())
-        .then(review => dispatch({
+        .then(product => dispatch({
             type: 'ADD_REVIEW', 
-            review
+            payload: product
         }));
     }
 }
