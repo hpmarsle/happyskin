@@ -18,10 +18,10 @@ export const addReview = (review, productId) => {
 
 export const deleteReview = (reviewId, productId) => {
     return (dispatch) => {
-        fetch(`http://localhost:3000/api/v1/products/${productId}/reviews/${reviewId}`, {
+        return fetch(`http://localhost:3000/api/v1/products/${productId}/reviews/${reviewId}`, {
             method: 'DELETE'
         })
         .then(response => response.json())
-        .then(product => dispatch({type: 'DELETE_TRANSACTION', payload: product}))
+        .then(product => dispatch({type: 'DELETE_REVIEW', payload: product}))
     }
 }
