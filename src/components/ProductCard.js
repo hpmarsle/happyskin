@@ -23,7 +23,7 @@ const ProductCard = (props) => {
                 <div> {props.name} </div>
                 <div>{props.brand} </div>
                 <div>${props.price} </div>
-                <div>{props.reviews} </div>
+                <div>{props.reviews.length >= 1 ? props.reviews[0].star_rating : "No Reviews"} </div>
 
             </div>
         </StyledDiv>
