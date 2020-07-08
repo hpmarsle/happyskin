@@ -7,12 +7,7 @@ class Navbar extends React.Component {
         <div>
           <NavLink
             to="/"
-            
             exact
-           
-            activeStyle={{
-              padding: '1000px'
-            }}
           >Home</NavLink>
 
           <NavLink

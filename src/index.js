@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
-
+import About from './components/navigation/About'
+import Login from './components/navigation/Login'
 import { Provider } from 'react-redux';
 import store from './store'
 

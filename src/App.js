@@ -1,7 +1,7 @@
 import React from 'react';
 import ProductsContainer from './containers/ProductsContainer';
 import { Route } from 'react-router-dom'
-import NavBar from './Navbar';
+import NavBar from './components/navigation/Navbar';
 
 class App extends React.Component {
 
