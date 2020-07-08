@@ -18,7 +18,7 @@ function Reviews(props) {
                     <div>
                         <div>{review.comments} </div>
                     </div>
-                    <button onClick={handleDelete(review.id, review.product_id)}>Delete</button>
+                    <button onClick={() => handleDelete(review.id, review.product_id)}>Delete</button>
                 </div>
             )}
         </div>
