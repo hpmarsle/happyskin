@@ -1,7 +1,17 @@
 import React from 'react'
 import { addReview } from '../actions/reviews'
 import { connect } from 'react-redux'
+import styled from 'styled-components'
 
+const StyledDiv = styled.div`
+    margin: 20px;
+    padding: 10px;
+    border: solid pink;
+
+    height: auto;
+    width: auto;
+
+`
 class ReviewInput extends React.Component {
     state = {
         star_rating: '',
@@ -26,7 +36,8 @@ class ReviewInput extends React.Component {
     
     render() {
         return (
-            <div>
+            <StyledDiv>
+                <h3>Leave a Review</h3>
                 <form onSubmit={this.handleSubmit}>
                     <label>Rating</label>
                     <input type="text"name="star_rating" value={this.state.star_rating} onChange={this.handleChange}/>
@@ -34,7 +45,7 @@ class ReviewInput extends React.Component {
                     <input type="textarea"name="comments" value={this.state.comments} onChange={this.handleChange}/>
                     <input type="submit"/>
                 </form>
-            </div>
+            </StyledDiv>
         )
     }
 }

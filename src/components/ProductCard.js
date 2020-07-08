@@ -27,7 +27,7 @@ const ProductCard = (props) => {
                 <Image src={props.image} alt="product pic"/>
                 <div> {props.name} </div>
                 <div>{props.brand} </div>
-                <div>${props.price} </div>
+                <div>${props.price}0 </div>
                 <div>{props.reviews.length >= 1 ? props.reviews[0].star_rating : "No Reviews"} </div>
 
             </div>
