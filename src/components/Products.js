@@ -15,7 +15,7 @@ export default function Products(props) {
                 brand={product.brand} 
                 image={product.image} 
                 price={product.price}
-                reviews={product.reviews[0].star_rating}
+                reviews={product.reviews}
                 /> 
                 </Link>
             )}
