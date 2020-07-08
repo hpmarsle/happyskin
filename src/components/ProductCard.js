@@ -6,6 +6,9 @@ const StyledDiv = styled.div`
     padding: 10px;
     border: solid pink;
     text-align: center;
+    float: left;
+    height: auto;
+    width: auto;
 
 `
 const Image = styled.img`
@@ -13,6 +16,8 @@ const Image = styled.img`
     border-radius: 4px;
     padding: 5px;
     width: 150px;
+    height: 150px;
+    
 `
 
 const ProductCard = (props) => {
