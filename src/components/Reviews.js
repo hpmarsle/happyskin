@@ -17,6 +17,10 @@ function Reviews(props) {
     const handleDelete = (reviewId, productId) => {
         props.deleteReview(reviewId, productId)
     }
+
+    const handleEdit = (reviewId, productId) => {
+        console.log('handling edit')
+    }
     if (props.reviews  === undefined || props.reviews  == 0) {
         return (<h3>No Reviews</h3>)
     } else {
@@ -33,7 +37,8 @@ function Reviews(props) {
                         <div>
                             <div>{review.comments} </div>
                         </div>
-                        <button onClick={() => handleDelete(review.id, review.product_id)}>Delete</button><br /><br />
+                        <button onClick={() => handleEdit(review.id, review.product_id)}>Edit</button><button onClick={() => handleDelete(review.id, review.product_id)}>Delete</button>
+                        <br /><br />
                     </div>
                 )}
             </StyledDiv>
