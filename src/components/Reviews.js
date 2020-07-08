@@ -1,7 +1,11 @@
 import React from 'react'
+import { connect } from 'react-redux'
+import { deleteReview } from '../actions/reviews'
 
-export default function Reviews(props) {
-
+function Reviews(props) {
+    const handleDelete = (reviewId, productId) => {
+        props.deleteReview(reviewId, productId)
+    }
     return (
         <div>
             Reviews are rendering in the container.
@@ -14,9 +18,11 @@ export default function Reviews(props) {
                     <div>
                         <div>{review.comments} </div>
                     </div>
+                    <button onClick={handleDelete(review.id, review.product_id)}>Delete</button>
                 </div>
             )}
         </div>
     )
 }
  
+export default connect(null, {deleteReview})(Reviews)
