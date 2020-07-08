@@ -6,7 +6,6 @@ export default function Products(props) {
 
     return (
         <div>
-            Products here
             {props.products.map(product => 
                 <Link to ={`/products/${product.id}`}>
                 < ProductCard 
