@@ -11,23 +11,18 @@ class Navbar extends React.Component {
             exact
            
             activeStyle={{
-              background: 'darkblue'
+              padding: '1000px'
             }}
           >Home</NavLink>
+
           <NavLink
             to="/about"
             exact
-            activeStyle={{
-              background: 'darkblue'
-            }}
           >About</NavLink>
+
           <NavLink
             to="/login"
             exact
-          
-            activeStyle={{
-              background: 'darkblue'
-            }}
           >Login</NavLink>
         </div>
       )
