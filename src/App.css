@@ -1,0 +1,15 @@
+.App {
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 10vh;
+    background: pink;
+}
+
+.navlink {
+    text-decoration: none;
+}
