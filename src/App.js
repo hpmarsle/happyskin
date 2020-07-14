@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import NavBar from './components/navigation/Navbar';
 import About from './components/navigation/About'
 import Login from './components/navigation/Login' 
+import './App.css'
 
 class App extends React.Component {
 
