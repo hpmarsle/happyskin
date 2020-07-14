@@ -1,12 +1,16 @@
 import React from 'react'
 import ProductsContainer from '../../containers/ProductsContainer'
 
-const Home = () => {
-    return (
-        <div>
-            <ProductsContainer />
-        </div>
-    )
+class Home extends React.Component{
+
+    render(){
+
+        return (
+            <div>
+                <ProductsContainer />
+            </div>
+        )
+    }
 }
 
 export default Home
