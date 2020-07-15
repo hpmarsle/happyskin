@@ -5,6 +5,7 @@ import Products from '../components/Products'
 import ProductPage from '../components/ProductPage'
 import { Route } from 'react-router-dom'
 import styled from 'styled-components'
+import ReviewInputEdit from '../components/ReviewInputEdit'
 
 const Container = styled.div`
     display: flex;
@@ -24,6 +25,7 @@ class ProductsContainer extends Component {
             <Container>
 
                 <div>
+                    <Route path="/products/:productId/reviews/:reviewId" render={(routerProps) => <ReviewInputEdit {...routerProps} products={this.props.products}/> } />
 
                     <Route exact path='/products/:id' render={(routerProps) => <ProductPage {...routerProps} products={this.props.products} /> } />
                     <Route exact path='/' render={() => <Products products={this.props.products} /> } />
