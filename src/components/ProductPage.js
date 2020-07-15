@@ -6,7 +6,7 @@ import styled from 'styled-components'
 
 const ProductPage = (props) => {
 
-    let product = props.products.filter(product => product.id == props.match.params.id)[0]
+    let product = props.products.find(product => product.id == props.match.params.id)
 
     return (
         <div>
