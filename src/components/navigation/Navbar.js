@@ -9,19 +9,23 @@ class Navbar extends React.Component {
             to="/"
             exact
             className='navlink'
+            activeStyle={{borderBottom: 'solid #fff'}}
           >Home</NavLink>
 
           <NavLink
             to="/about"
             exact
             className='navlink'
+            activeStyle={{borderBottom: 'solid #fff'}}
           >About</NavLink>
 
           <NavLink
             to="/login"
             exact
             className='navlink'
-          >Login</NavLink>
+            activeStyle={{borderBottom: 'solid #fff'}}
+          >Login</NavLink> <br />
+          <h1>Happyskin Co.</h1>
         </div>
       )
     }
