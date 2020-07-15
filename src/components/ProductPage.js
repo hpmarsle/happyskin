@@ -9,7 +9,7 @@ const ProductPage = (props) => {
     let product = props.products.find(product => product.id == props.match.params.id)
 
     return (
-        <div>
+        <div className="productShowPage">
 
             <div>
                 {product ? <img src={product.image} alt="product" width="500px"height="500px" /> : null}
