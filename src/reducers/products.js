@@ -11,7 +11,7 @@ export default (state = { products:[], loading: false }, action) => {
         case 'ADD_REVIEW':
         
             let products = state.products.map(product => {
-                if (product.id == action.payload.id) {
+                if (product.id === action.payload.id) {
                     return action.payload
                 } else {
                     return product 
@@ -21,7 +21,7 @@ export default (state = { products:[], loading: false }, action) => {
         
         case 'DELETE_REVIEW':
             let productsRevised = state.products.map(product => {
-                if (product.id == action.payload.id) {
+                if (product.id === action.payload.id) {
                     return action.payload
                 } else {
                     return product 
@@ -31,7 +31,7 @@ export default (state = { products:[], loading: false }, action) => {
             return {...state, products: productsRevised}
         case 'EDIT_REVIEW':
             let products2 = state.products.map(product => {
-                if (product.id == action.payload.id) {
+                if (product.id === action.payload.id) {
                     return action.payload
                 } else {
                     return product

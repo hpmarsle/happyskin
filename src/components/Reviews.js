@@ -19,7 +19,7 @@ function Reviews(props) {
         props.deleteReview(reviewId, productId)
     }
 
-    if (props.reviews  === undefined || props.reviews  == 0) {
+    if (props.reviews  === undefined || props.reviews  === 0) {
         return (<h3>No Reviews</h3>)
     } else {
         return (
