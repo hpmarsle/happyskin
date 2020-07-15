@@ -20,7 +20,7 @@ class ReviewInputEdit extends React.Component{
     }
 
     handleSubmit = (event) => {
-        // props.editReview
+        this.props.editReview(this.state.id, this.state.product_id, this.state)
         this.setState({
             star_rating: '',
             comments: ''
@@ -46,4 +46,4 @@ class ReviewInputEdit extends React.Component{
 }
 
 
-export default ReviewInputEdit
+export default connect(null, { editReview })(ReviewInputEdit)
