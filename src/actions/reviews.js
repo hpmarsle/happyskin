@@ -26,7 +26,7 @@ export const deleteReview = (reviewId, productId) => {
     }
 }
 
-export const editReview = (reviewId, productId) => {
+export const editReview = (reviewId, productId, review) => {
 
     return (dispatch) => {
         fetch(`http://localhost:3000/api/v1/products/${productId}/reviews/${reviewId}`, {
