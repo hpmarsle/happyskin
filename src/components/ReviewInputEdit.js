@@ -1,4 +1,6 @@
 import React from 'react'
+import { connect } from 'react-redux'
+import { editReview } from '../actions/reviews'
 
 class ReviewInputEdit extends React.Component{
     constructor(props){
@@ -17,7 +19,15 @@ class ReviewInputEdit extends React.Component{
         })
     }
 
+    handleSubmit = (event) => {
+        // props.editReview
+        this.setState({
+            star_rating: '',
+            comments: ''
+        })
+        this.props.history.push(`/products/${this.state.product_id}`)
 
+    }
     render() {
 
         return (
