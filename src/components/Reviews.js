@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { deleteReview } from '../actions/reviews'
 import styled from 'styled-components'
 
+
 const StyledDiv = styled.div`
     margin: 20px;
     padding: 10px;
@@ -18,26 +19,23 @@ function Reviews(props) {
         props.deleteReview(reviewId, productId)
     }
 
-    const handleEdit = (reviewId, productId) => {
-        console.log('handling edit')
-    }
     if (props.reviews  === undefined || props.reviews  == 0) {
         return (<h3>No Reviews</h3>)
     } else {
-
         return (
             <StyledDiv>
                 <h3>REVIEWS</h3>
                 {props.reviews && props.reviews.map(review => 
                     <div key={review.id}>
                         <div>
-                            <div>{review.star_rating} </div>
+                            <div class='star_rating'>{review.star_rating} </div>
                         </div>
     
                         <div>
-                            <div>{review.comments} </div>
-                        </div>
-                        <button onClick={() => handleEdit(review.id, review.product_id)}>Edit</button><button onClick={() => handleDelete(review.id, review.product_id)}>Delete</button>
+                            <div class='comments'>{review.comments} </div>
+                        </div> {/*How do I pass this info as props to pre-fill the edit form?*/}
+                        <button onClick={event =>  window.location.href=`/products/${review.product_id}/reviews/${review.id}`}>Edit</button>
+                        <button onClick={() => handleDelete(review.id, review.product_id)}>Delete</button>
                         <br /><br />
                     </div>
                 )}
