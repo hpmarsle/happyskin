@@ -1,5 +1,7 @@
 .App {
     text-align: center;
+    font-family: 'Poppins', sans-serif;
+
 }
 
 .navbar {
@@ -12,4 +14,12 @@
 
 .navlink {
     text-decoration: none;
+    font-weight: 500;
+    font-size: xx-large;
+
+}
+
+.productCards {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
 }

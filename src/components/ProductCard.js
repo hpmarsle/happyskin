@@ -9,14 +9,18 @@ const StyledDiv = styled.div`
     float: left;
     height: auto;
     width: auto;
+    max-width: 1000px;
+    max-height: 1000px;
 
 `
 const Image = styled.img`
     border: 1px solid #ddd;
     border-radius: 4px;
     padding: 5px;
-    width: 150px;
-    height: 150px;
+    width: auto;
+    height: auto;
+    max-width: 400px;
+    max-height: 400px;
     
 `
 
