@@ -25,7 +25,7 @@ class Navbar extends React.Component {
             className='navlink'
             activeStyle={{borderBottom: 'solid #fff'}}
           >Login</NavLink> <br />
-          <h1>Happyskin Co.</h1>
+          <h1 className="company">Happyskin Co.</h1>
         </div>
       )
     }
