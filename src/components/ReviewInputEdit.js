@@ -6,8 +6,8 @@ class ReviewInputEdit extends React.Component{
     constructor(props){
         super(props)
         this.state = {
-            star_rating: '',//set state to star_rating from div? pass as props? does it need to be an input, not a div?
-            comments:'',
+            star_rating: props.location.state.star_rating,
+            comments: props.location.state.comments,
             id: props.match.params.reviewId,
             product_id: props.match.params.productId
         }
