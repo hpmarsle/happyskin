@@ -26,11 +26,16 @@ class ReviewInput extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
-        this.props.addReview(this.state, this.props.product.id)
-        this.setState({
-            star_rating: '',
-            comments: ''
-        })
+
+        if (this.state.star_rating === "" || this.state.comments === "") {
+            alert("Please fill out both fields");
+        } else {
+            this.props.addReview(this.state, this.props.product.id)
+            this.setState({
+                star_rating: '',
+                comments: ''
+            })
+        }
 
     }
     
