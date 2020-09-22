@@ -6,11 +6,14 @@ const StyledDiv = styled.div`
     padding: 10px;
     border: solid pink;
     text-align: center;
-    float: left;
+    display: inline-block;
     height: auto;
     width: auto;
+    min-height: 500px;
+    min-width: 350px;
     max-width: 1000px;
     max-height: 1000px;
+    justify-content: center;
 
 `
 const Image = styled.img`
@@ -19,9 +22,9 @@ const Image = styled.img`
     padding: 5px;
     width: auto;
     height: auto;
+    min-height: 400px;
     max-width: 400px;
     max-height: 400px;
-    
 `
 
 const ProductCard = (props) => {
@@ -33,7 +36,6 @@ const ProductCard = (props) => {
                 <div>{props.brand} </div>
                 <div>${props.price}0 </div>
                 <div>{props.reviews.length >= 1 ? props.reviews[0].star_rating : "No Reviews"} </div>
-
             </div>
         </StyledDiv>
     )
