@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 export default function Products(props) {
 
     return (
-        <div style={{textAlign: 'center'}}className="productCards">
+        <div className="productCards">
             {props.products.map(product => 
                 <>
                     <Link to ={`/products/${product.id}`} key={product.id}>

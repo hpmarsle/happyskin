@@ -4,10 +4,9 @@ import { connect } from 'react-redux'
 import styled from 'styled-components'
 
 const StyledDiv = styled.div`
-    margin: 20px;
-    padding: 10px;
+    margin: 2em;
+    padding: 1em;
     border: solid pink;
-
     height: auto;
     width: auto;
 

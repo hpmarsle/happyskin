@@ -1,7 +1,6 @@
 import React from 'react'
 import ReviewsContainer from '../containers/ReviewsContainer'
 import ReviewInput from '../components/ReviewInput'
-import styled from 'styled-components'
 
 
 const ProductPage = (props) => {
@@ -10,11 +9,10 @@ const ProductPage = (props) => {
 
     return (
         <div className="productShowPage">
-
-            <div>
-                {product ? <img src={product.image} alt="product" width="500px"height="500px" /> : null}
+            <div className="productPageImage">
+                {product ? <img src={product.image} alt="product image having issues rendering" max-width="500px" max-height="500px" /> : null}
             </div>
-            <div>
+            <div className="productPageDetails">
                 <h1>{product ? product.name : null}</h1>
                 <h3>{product ? product.brand : null}</h3>
                 <h3>${product ? product.price : null}0</h3>
