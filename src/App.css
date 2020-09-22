@@ -42,3 +42,14 @@
 .company{
     font-weight: 300;
 }
+
+form{
+    display: inline-block;
+}
+
+form input, form textarea{
+    padding: 4px;
+    margin: 4px;
+    display: block;
+
+}

@@ -42,12 +42,21 @@ class ReviewInput extends React.Component {
         return (
             <StyledDiv>
                 <h3>Leave a Review</h3>
-                <form onSubmit={this.handleSubmit}>
-                    <label>Rating</label>
-                    <input type="text"name="star_rating" value={this.state.star_rating} onChange={this.handleChange}/>
-                    <label>Comments:</label>
-                    <input type="textarea"name="comments" value={this.state.comments} onChange={this.handleChange}/>
-                    <input type="submit"/>
+                <form onSubmit={this.handleSubmit}>  
+                    <label for="star_rating">Rating</label>
+                    <input 
+                        type="text"
+                        name="star_rating" 
+                        value={this.state.star_rating} 
+                        onChange={this.handleChange} 
+                        placeholder="please type 1-5 stars"
+                    />
+                
+                    <label for="comments">Comments</label>
+                    <textarea type="text"name="comments" value={this.state.comments} onChange={this.handleChange}/>
+                    <div className="formButton">
+                        <input type="submit"/>
+                    </div>
                 </form>
             </StyledDiv>
         )
