@@ -37,7 +37,7 @@ class ProductsContainer extends Component {
 }
 const mapStateToProps = state => {
     return {
-        products: state.productsReducer.products
+        products: state.products.products
     }
 }
   
