@@ -10,7 +10,7 @@ const ProductPage = (props) => {
     return (
         <div className="productShowPage">
             <div className="productPageImage">
-                {product ? <img src={product.image} alt="product image having issues rendering" max-width="500px" max-height="500px" /> : null}
+                {product ? <img src={product.image} alt="product displayed " max-width="500px" max-height="500px" /> : null}
             </div>
             <div className="productPageDetails">
                 <h1>{product ? product.name : null}</h1>
