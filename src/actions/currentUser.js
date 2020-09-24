@@ -8,7 +8,7 @@ export const setCurrentUser = user => {
 //asynchronous action creator
 export const login = credentials => {
     return dispatch => {
-        return fetch("http://localhost:3000/login", {
+        return fetch("http://localhost:3000/api/v1/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -20,9 +20,9 @@ export const login = credentials => {
             if (user.error) {
                 alert(user.error)
             } else {
-                dispatch(setCurrentUser)
+                dispatch(setCurrentUser(user))
             }
         })
-        .catch()
+        .catch(console.log)
     }
 }
