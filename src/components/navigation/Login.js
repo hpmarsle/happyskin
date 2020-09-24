@@ -14,18 +14,16 @@ function Login({loginFormData, updateLoginForm, login }) {
     }
 
     const handleSubmit = event => {
-        event.preventDefault()
         login(loginFormData)
     }
 
     return (
         <div>
-            <h1>Login/SignUp</h1>
-            <h4>This will be Login / Setup Account page feature.</h4>
+            <h1>Login</h1>
             <form onSubmit={handleSubmit}>
                 <input value={loginFormData.username} name="username" onChange={handleInputChange} type='text' placeholder='username' />
                 <input value={loginFormData.password} name="password" onChange={handleInputChange} type='password' placeholder='password' />
-                <input type='submit' placeholder='Login/Signup' />
+                <input type='submit' value="Login" />
             </form>
         </div>
     )
