@@ -50,19 +50,18 @@ export const login = credentials => {
         .catch(console.log)
     }
 }
+export const clearCurrentUser = () => {
+    return {
+        type: "CLEAR_CURRENT_USER"
+    }
+}
 
 export const logout = () => {
     return (dispatch) => {
         dispatch(clearCurrentUser())
         return fetch("http://localhost:3000/api/v1/logout", {
-            credential: "include",
+            credentials: "include",
             method: "DELETE"
         })
     }  
-}
-
-export const clearCurrentUser = () => {
-    return {
-        type: "CLEAR_CURRENT_USER"
-    }
 }
