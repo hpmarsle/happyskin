@@ -5,9 +5,13 @@ import About from './components/navigation/About'
 import Login from './components/navigation/Login' 
 import Home from './components/navigation/Home' 
 import './App.css'
+import { connect } from 'react-redux'
+import { getCurrentUser } from './actions/currentUser'
 
 class App extends React.Component {
-
+  componentDidMount(){
+    this.props.getCurrentUser()
+  }
   render() {
     return (
       <Router>
@@ -23,4 +27,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default connect(null, { getCurrentUser })(App);
