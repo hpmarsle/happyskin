@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import NavBar from './components/navigation/Navbar';
 import About from './components/navigation/About'
 import Login from './components/navigation/Login' 
+import Logout from './components/navigation/Logout' 
 import Home from './components/navigation/Home' 
 import './App.css'
 import { connect } from 'react-redux'
@@ -16,11 +17,11 @@ class App extends React.Component {
     return (
       <Router>
         <div className="App">
-          <NavBar />
-
+          <NavBar/>          
           <Route path="/" component={Home}/> 
           <Route path="/about" component={About}/> 
           <Route path="/login" component={Login}/> 
+          <Route path="/logout" component={Logout}/> 
         </div>
       </Router>
     );
