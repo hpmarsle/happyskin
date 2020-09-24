@@ -1,3 +1,10 @@
+//synchronous action creators
+export const setCurrentUser = user => {
+    return {
+        type: "SET_CURRENT_USER", 
+        user
+    }
+}
 //asynchronous action creator
 export const login = credentials => {
     return dispatch => {
@@ -8,5 +15,14 @@ export const login = credentials => {
             },
             body: JSON.stringify(credentials)
         })
+        .then(response => response.json())
+        .then(user => {
+            if (user.error) {
+                alert(user.error)
+            } else {
+                dispatch(setCurrentUser)
+            }
+        })
+        .catch()
     }
 }
