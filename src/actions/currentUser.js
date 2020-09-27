@@ -1,4 +1,3 @@
-//synchronous action creators
 export const setCurrentUser = user => {
     return {
         type: "SET_CURRENT_USER", 
@@ -6,7 +5,12 @@ export const setCurrentUser = user => {
     }
 }
 
-//asynchronous action creator
+export const clearCurrentUser = () => {
+    return {
+        type: "CLEAR_CURRENT_USER"
+    }
+}
+
 export const getCurrentUser = () => {
     return dispatch => {
         return fetch("http://localhost:3000/api/v1/get_current_user", {
@@ -25,11 +29,10 @@ export const getCurrentUser = () => {
                 dispatch(setCurrentUser(user))
             }
         })
-        .catch(console.log)
     }
 }
 
-export const login = credentials => {
+export const login = (credentials, history) => {
     return dispatch => {
         return fetch("http://localhost:3000/api/v1/login", {
             credentials: "include",
@@ -45,14 +48,10 @@ export const login = credentials => {
                 alert(user.error)
             } else {
                 dispatch(setCurrentUser(user))
+                history.push("/")
             }
         })
         .catch(console.log)
-    }
-}
-export const clearCurrentUser = () => {
-    return {
-        type: "CLEAR_CURRENT_USER"
     }
 }
 
