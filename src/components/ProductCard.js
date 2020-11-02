@@ -28,6 +28,11 @@ const Image = styled.img`
 `
 
 const ProductCard = (props) => {
+  let avg_rating = (reviews) => {
+    let mapped = reviews.map((r) => r['star_rating'])
+    return mapped.reduce((acc, n) => acc + n) / mapped.length
+  }
+
   return (
     <StyledDiv>
       <div id={props.id}>
@@ -38,7 +43,7 @@ const ProductCard = (props) => {
 
         <div>
           {props.reviews.length >= 1
-            ? new Array(props.reviews[0].star_rating).fill(
+            ? new Array(avg_rating(props.reviews)).fill(
                 <FontAwesomeIcon icon='star' />
               )
             : 'No Reviews'}{' '}
