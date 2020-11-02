@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { deleteReview } from '../actions/reviews'
 import { Link } from 'react-router-dom'
-import StarRatingComponent from 'react-star-rating-component'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 class Review extends React.Component {
   render() {
@@ -12,12 +12,7 @@ class Review extends React.Component {
       <div id={id}>
         <div>
           <div className='star_rating'>
-            {star_rating}
-            <StarRatingComponent
-              name='rate1'
-              starCount={5}
-              value={star_rating}
-            />
+            {new Array(star_rating).fill(<FontAwesomeIcon icon='star' />)}
           </div>
         </div>
 

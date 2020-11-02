@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import StarRatingComponent from 'react-star-rating-component'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const StyledDiv = styled.div`
   margin: 20px;
@@ -35,16 +35,13 @@ const ProductCard = (props) => {
         <div> {props.name} </div>
         <div>{props.brand} </div>
         <div>${props.price}0 </div>
+
         <div>
-          {props.reviews.length >= 1 ? (
-            <StarRatingComponent
-              name='rate1'
-              starCount={5}
-              value={props.reviews[0].star_rating}
-            />
-          ) : (
-            'No Reviews'
-          )}{' '}
+          {props.reviews.length >= 1
+            ? new Array(props.reviews[0].star_rating).fill(
+                <FontAwesomeIcon icon='star' />
+              )
+            : 'No Reviews'}{' '}
         </div>
       </div>
     </StyledDiv>
