@@ -5,6 +5,7 @@ import About from './components/navigation/About'
 import Login from './components/navigation/Login'
 import Logout from './components/navigation/Logout'
 import Home from './components/navigation/Home'
+import Signup from './components/navigation/Signup'
 import './App.css'
 import { connect } from 'react-redux'
 import { getCurrentUser } from './actions/currentUser'
@@ -24,6 +25,7 @@ class App extends React.Component {
           <NavBar />
           <Route path='/' component={Home} />
           <Route path='/about' component={About} />
+          <Route path='/signup' component={Signup} />
           <Route path='/login' component={Login} />
           <Route path='/logout' component={Logout} />
         </div>
