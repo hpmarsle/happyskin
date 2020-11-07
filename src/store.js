@@ -4,13 +4,14 @@ import users from './reducers/users'
 import currentUser from './reducers/currentUser'
 import loginForm from './reducers/loginForm'
 import products from './reducers/products'
-// import reviews from './reducers/reviews'
+import signupForm from './reducers/signupForm'
 import { composeWithDevTools } from 'redux-devtools-extension'
 
 const reducer = combineReducers({
   users,
   currentUser,
   loginForm,
+  signupForm,
   products,
 })
 
