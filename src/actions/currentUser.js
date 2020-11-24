@@ -1,3 +1,6 @@
+import { clearLoginForm } from './loginForm'
+import { clearSignupForm } from './signupForm'
+
 export const setCurrentUser = (user) => {
   return {
     type: 'SET_CURRENT_USER',
@@ -50,6 +53,7 @@ export const login = (credentials, history) => {
           alert(user.error)
         } else {
           dispatch(setCurrentUser(user))
+          dispatch(clearLoginForm())
           history.push('/')
         }
       })
@@ -86,6 +90,7 @@ export const signup = (signupFormInfo, history) => {
           alert(user.error)
         } else {
           dispatch(setCurrentUser(user))
+          dispatch(clearSignupForm())
           history.push('/')
         }
       })
