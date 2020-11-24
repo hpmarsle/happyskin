@@ -66,3 +66,29 @@ export const logout = () => {
     })
   }
 }
+
+export const signup = (signupFormInfo, history) => {
+  return (dispatch) => {
+    const userInfo = {
+      user: signupFormInfo,
+    }
+    return fetch('http://localhost:3000/api/v1/signup', {
+      credentials: 'include',
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(userInfo),
+    })
+      .then((response) => response.json())
+      .then((user) => {
+        if (user.error) {
+          alert(user.error)
+        } else {
+          dispatch(setCurrentUser(user))
+          history.push('/')
+        }
+      })
+      .catch(console.log)
+  }
+}
